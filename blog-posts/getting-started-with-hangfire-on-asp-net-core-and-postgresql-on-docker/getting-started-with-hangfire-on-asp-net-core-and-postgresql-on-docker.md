@@ -26,24 +26,25 @@ We will get started by install and configure a database, then ASP.NET Core MVC, 
 Setup PostgreSQL database
 There are more than one way to setup PostgreSQL database. I’m about to use Docker for the purpose, but you can go and install it directly from the Postgresql official webisite.
 To continue we need Docker installed and running. Lets proceed with pulling the Docker image for PostgreSQL. Open terminal and run:
-```$ docker pull postgresql```
+`$ docker pull postgresql`
 
 After we have the image, we can run a container and provide username and password for the database:
-```$ docker run -d -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres```
+`$ docker run -d -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres`
 
 Create ASP.NET MVC project
 So far we have the db up and running, let’s continue with the creation of the MVC project and configure it to use our database.
 
 Create new folder and enter it:
-```$ mkdir aspnet-psql-hangfire && cd aspnet-psql-hangfire```
+`$ mkdir aspnet-psql-hangfire && cd aspnet-psql-hangfire`
 
 Now let’s create the MVC project. You can go with whatever you want from the list of available dotnet project templates.
-```$ dotnet new mvc```
+`$ dotnet new mvc`
 
 Next install Nuget package for Entity Framework driver for PostgreSQL :
-```$ dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL```
+`$ dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL`
 
 Add empty dbcontext :
+
 ```
 using Microsoft.EntityFrameworkCore;
   namespace aspnet_psql_hangfire.Models
@@ -57,9 +58,10 @@ public DefaultDbContext(DbContextOptions<DefaultDbContext> options)
 ```
 
 Restore the packages by running:
-```$ dotnet restore```
+`$ dotnet restore`
 
 Edit appsettings.json and enter the connection string:
+
 ```
 {
 "connectionStrings": {
@@ -80,7 +82,8 @@ Database=aspnet-psql-hangfire-db"
 ```
 
 The framework must know that we want to use PostgreSQL database so add the driver to your Startup.cs file within the ConfigureServices method:
-```services.AddEntityFrameworkNpgsql().AddDbContext<DefaultDbContext>(options => {
+
+````services.AddEntityFrameworkNpgsql().AddDbContext<DefaultDbContext>(options => {
 options.UseNpgsql(
 Configuration.GetConnectionString("defaultConnection"));
 });```
@@ -108,7 +111,8 @@ Then restore again the packages by typing:
 
 Create task
 In the Configure method, below the app.UseHangFireServier() add the following tasks:
-```
+````
+
 //Fire-and-Forget
 BackgroundJob.Enqueue(() => Console.WriteLine("Fire-and-forget"));
 //Delayed
@@ -118,7 +122,8 @@ RecurringJob.AddOrUpdate(() => Console.WriteLine("Minutely Job"), Cron.Minutely)
 //Continuation
 var id = BackgroundJob.Enqueue(() => Console.WriteLine("Hello, "));
 BackgroundJob.ContinueWith(id, () => Console.WriteLine("world!"));
-```
+
+````
 
 And finally run the app:
 ``$ dotnet run```
@@ -128,3 +133,4 @@ Observe the console. The tasks are executing. Now go to the dashboard provided b
 Summary and further improvements
 The dashboard is only available for localhost connections. If you would like to use it in production environment, you have to apply authentication. There are plenty of tutorials describing how to do that.
 Here is the repo (https://github.com/gmarokov/aspnet-psql-hangfire) from the project, I hope you liked it. Happy coding!
+````
