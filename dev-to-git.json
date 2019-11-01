@@ -6,5 +6,9 @@
   {
     "id": 199241,
     "relativePathToArticle": "./blog-posts/getting-started-with-ansible-windows/getting-started-with-ansible-windows.md"
+  },
+  {
+    "id": 199321,
+    "relativePathToArticle": "./blog-posts/wp-with-wpcli-on-win-subsystem/wp-with-wpcli-on-win-subsystem.md"
   }
 ]
