@@ -2,5 +2,9 @@
   {
     "id": 198439,
     "relativePathToArticle": "./blog-posts/getting-started-with-hangfire/getting-started-with-hangfire.md"
+  },
+  {
+    "id": 199241,
+    "relativePathToArticle": "./blog-posts/getting-started-with-ansible-windows/getting-started-with-ansible-windows.md"
   }
 ]
