@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: 'Getting started with Hangfire on ASP.NET Core and PostgreSQL on Docker'
 cover_image: ''
 description: 'How to integrate Hangfire when using PostgreSQL database'

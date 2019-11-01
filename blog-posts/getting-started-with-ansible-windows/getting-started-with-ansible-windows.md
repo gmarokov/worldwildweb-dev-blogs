@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: 'Getting started with Ansible and configuring Windows hosts'
 cover_image: ''
 description: 'Getting started configuring Windows hosts with Ansible'
@@ -144,13 +144,15 @@ In the file describe the playbook as follows:
 ```
 ---
 - hosts: dbservers
-tasks:
-- name: Install Chocolatey
-  raw: Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))- name: Install SQL Server
-  win_chocolatey:
+  tasks:
+   - name: Install Chocolatey
+     raw: Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))- name: Install SQL Server
+   
+   win_chocolatey:
     name: sql-server-2017
     state: present- name: Reboot to apply changes
-  win_reboot:
+   
+   win_reboot:
     reboot_timeout: 3600
 ```
 
