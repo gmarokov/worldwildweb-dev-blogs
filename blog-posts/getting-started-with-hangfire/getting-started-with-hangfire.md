@@ -160,12 +160,12 @@ BackgroundJob.ContinueWith(id, () => Console.WriteLine("world!"));
 And finally run the app:
 `$ dotnet run`
 
-![Hangfire task being executed](/assets/img/hangfire-tasks.png 'Hangfire tasks being executed')
+![Hangfire task being executed](./assets/img/hangfire-tasks.png 'Hangfire tasks being executed')
 
 Observe the console.
 Now go to the dashboard provided by Hangfire at http://localhost:5000/hangfire for more task info.
 
-![Hangfire dashboard](/assets/img/hangfire-dashboard.png 'Hangfire dashboard')
+![Hangfire dashboard](./assets/img/hangfire-dashboard.png 'Hangfire dashboard')
 
 ## Summary
 
