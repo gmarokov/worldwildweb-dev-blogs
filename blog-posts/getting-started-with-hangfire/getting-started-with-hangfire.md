@@ -22,7 +22,8 @@ There are a number of use cases when you need to perform background processing i
 - purge temporary files
 - recurring automated reports
 - database maintenance
-  and counting..
+
+and counting..
 
 We will get started by install and configure the database, then create new ASP.NET Core MVC project, after which we will get to Hangfire and run few background tasks with it.
 
@@ -31,7 +32,8 @@ We will get started by install and configure the database, then create new ASP.N
 There are more than one way to setup PostgreSQL database. I’m about to use Docker for the purpose, but you can install it directly from the [Postgresql official webisite](https://www.postgresql.org/download/).
 
 If you choose do download and install PostgreSQL, skip the following Docker commands. Instead configure you db instance with the parameters from the Docker example.
-Else we need Docker installed and running. Lets proceed with pulling the image for PostgreSQL. Open terminal and run:  
+
+Else we need Docker installed and running. Lets proceed with pulling the image for PostgreSQL. Open terminal and run:
 `$ docker pull postgresql`
 
 We have the image, let's create a container from it and provide username and password for the database:
@@ -44,39 +46,42 @@ So far we have the db up and running, continuing with the creation of the MVC pr
 Create new folder and enter it:
 `$ mkdir aspnet-psql-hangfire && cd aspnet-psql-hangfire`
 
-When creating new project, you can go with whatever you want from the list of available dotnet project templates. I'll stick to mvc.  
+When creating new project, you can go with whatever you want from the list of available dotnet project templates. I'll stick to mvc.
 `$ dotnet new mvc`
 
-Next install Nuget package for Entity Framework driver for PostgreSQL:  
+Next install Nuget package for Entity Framework driver for PostgreSQL:
 `$ dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL`
 
 Add empty dbcontext:
 
-    using Microsoft.EntityFrameworkCore;
-    namespace aspnet_psql_hangfire.Models
+```
+using Microsoft.EntityFrameworkCore;
+
+namespace aspnet_psql_hangfire.Models
+{
+    public class DefaultDbContext : DbContext
     {
-        public class DefaultDbContext : DbContext
-        {
-            public DefaultDbContext(DbContextOptions<DefaultDbContext> options)
-                : base(options) { }
-        }
+        public DefaultDbContext(DbContextOptions<DefaultDbContext> options)
+            : base(options) { }
     }
+}
+```
 
 Restore the packages by running:
 `$ dotnet restore`
 
-Edit appsettings.json and enter the connection string:
+Edit `appsettings.json` and enter the connection string:
 
 ```
 {
     "connectionStrings": {
-		"defaultConnection":
-			"Host=localhost;
+        "defaultConnection":
+            "Host=localhost;
 			Port=5433;
 			Username=postgres;
 			Password=postgres;
 			Database=aspnet-psql-hangfire-db"
-	},
+    },
 	"Logging": {
 		"LogLevel": {
 			"Default": "Warning"
@@ -86,7 +91,7 @@ Edit appsettings.json and enter the connection string:
 }
 ```
 
-The framework must know that we want to use PostgreSQL database so add the driver to your Startup.cs file within the ConfigureServices method:
+The framework must know that we want to use PostgreSQL database so add the driver to your `Startup.cs` file within the ConfigureServices method:
 
 ```
 services.AddEntityFrameworkNpgsql().AddDbContext<DefaultDbContext>(options => {
@@ -102,21 +107,21 @@ We are ready for a initial migration:
 Let’s continue with final steps — install packages for Hangfire:
 `$ dotnet add package Hangfire.AspNetCore && dotnet add package Hangfire.Postgresql`
 
-Add the following using statement to the Startup.cs.
+Add the following using statement to the `Startup.cs`.
 
 ```
 using Hangfire;
 using Hangfire.PostgreSql;
 ```
 
-Again in the ConfigureServices method in the Startup.cs, let Hangfire server to use our default connection string:
+Again in the ConfigureServices method in the `Startup.cs`, let Hangfire server to use our default connection string:
 
 ```
 services.AddHangfire(x =>
     x.UsePostgreSqlStorage(Configuration.GetConnectionString("defaultConnection")));
 ```
 
-Again in Startup.cs, but now in Configure method enter:
+Again in `Startup.cs`, but now in Configure method enter:
 
 ```
 app.UseHangfireDashboard(); //Will be available under http://localhost:5000/hangfire"
@@ -128,7 +133,7 @@ Then restore again the packages by typing:
 
 ## Create tasks
 
-In the Configure method, below the app.UseHangFireServier() add the following tasks:
+In the Configure method, below the `app.UseHangFireServier()` add the following tasks:
 
 ```
 //Fire-and-Forget

@@ -3,7 +3,7 @@ published: true
 title: 'WordPress with WP-CLI on Bash on Ubuntu on Windows 10'
 cover_image: ''
 description: 'Using wp-cli on Bash on Windows 10'
-tags: php, wordpress, wp-cli, windows, windows-subsystem
+tags: php, wordpress, wp-cli, windows
 series:
 canonical_url: 'https://worldwildweb.dev/wordpress-with-wp-cli-on-bash-on-ubuntu-on-windows-10/'
 ---

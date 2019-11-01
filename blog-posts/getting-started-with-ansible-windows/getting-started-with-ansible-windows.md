@@ -146,11 +146,12 @@ In the file describe the playbook as follows:
 - hosts: dbservers
   tasks:
    - name: Install Chocolatey
-     raw: Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))- name: Install SQL Server
+     raw: Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
-   win_chocolatey:
-    name: sql-server-2017
-    state: present- name: Reboot to apply changes
+   - name: Install SQL Server
+     win_chocolatey:
+     name: sql-server-2017
+     state: present- name: Reboot to apply changes
 
    win_reboot:
     reboot_timeout: 3600
