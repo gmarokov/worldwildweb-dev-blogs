@@ -2,10 +2,10 @@
 published: false
 title: "Getting started with Hangfire on ASP.NET Core and PostgreSQL on Docker"
 cover_image: ""
-description: "Description of the article"
+description: "How to integrate Hangfire when using PostgreSQL database"
 tags: aspnet, hangfire, postgresql, docker
 series:
-canonical_url:
+canonical_url: "https://worldwildweb.dev/getting-started-with-hangfire-on-asp-net-core-and-postgresql-on-docker/"
 ---
 
 Hangfire is an incredibly easy way to perform fire-and-forget, delayed and recurring jobs inside ASP.NET applications. No Windows Service or separate process required. Backed by persistent storage. Open and free for commercial use.
