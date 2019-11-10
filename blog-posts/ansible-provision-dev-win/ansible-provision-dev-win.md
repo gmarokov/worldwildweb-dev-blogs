@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: 'Configure your dev Windows machine with Ansible'
 cover_image: ''
 description: 'How to use the power of Ansible for configuring your own Windows environment'
