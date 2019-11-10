@@ -10,5 +10,9 @@
   {
     "id": 199321,
     "relativePathToArticle": "./blog-posts/wp-with-wpcli-on-win-subsystem/wp-with-wpcli-on-win-subsystem.md"
+  },
+  {
+    "id": 202884,
+    "relativePathToArticle": "./blog-posts/ansible-provision-dev-win/ansible-provision-dev-win.md"
   }
 ]
