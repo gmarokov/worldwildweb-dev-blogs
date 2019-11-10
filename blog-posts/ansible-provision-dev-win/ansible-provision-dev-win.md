@@ -5,7 +5,7 @@ cover_image: ''
 description: 'How to use the power of Ansible for configuring your own Windows environment'
 tags: ansible, ansibleplaybook, windows
 series:
-canonical_url: 'https://worldwildweb.dev/wordpress-with-wp-cli-on-bash-on-ubuntu-on-windows-10/'
+canonical_url: 'https://worldwildweb.dev/configure-your-dev-windows-machine-with-ansible/'
 ---
 
 Ansible is well known it the IT operations fields with its fantastic automation abilities.
@@ -42,7 +42,7 @@ which hostname we will target later.
 # Enable WinRM
 
 By default WinRM works only for Private or Domain networks. You can skip that by providing parameter to `Enable-PSRemoting -SkipNetworkProfileCheck` but I don't suggest doing that. Instead make your trusted network private.
-Then enable WinRM `Enable-PSRemoting` running it in Powershell.
+Then enable WinRM: `Enable-PSRemoting` running it in Powershell.
 Enable Basic Auth: `Set-Item -Path WSMan:\localhost\Service\Auth\Basic -Value $true`
 Enable Unencrypted connection: `Set-Item -Path WSMan:\localhost\Service\AllowUnencrypted -Value $true`
 
