@@ -3,7 +3,7 @@ published: false
 title: 'Configure your dev Windows machine with Ansible'
 cover_image: ''
 description: 'How to use the power of Ansible for configuring your own Windows environment'
-tags: ansible, ansible-playbook, windows
+tags: ansible, ansibleplaybook, windows
 series:
 canonical_url: 'https://worldwildweb.dev/wordpress-with-wp-cli-on-bash-on-ubuntu-on-windows-10/'
 ---
