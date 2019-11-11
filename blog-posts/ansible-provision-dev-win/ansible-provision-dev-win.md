@@ -44,7 +44,7 @@ which hostname we will target later.
 By default WinRM works only for Private or Domain networks. You can skip that by providing parameter to `Enable-PSRemoting -SkipNetworkProfileCheck` but I don't suggest doing that. Instead make your trusted network private.
 Then enable WinRM:
 `Enable-PSRemoting` running it in Powershell.
-Enable Basic Auth: 
+Enable Basic Auth:
 `Set-Item -Path WSMan:\localhost\Service\Auth\Basic -Value $true`
 Enable Unencrypted connection:
 `Set-Item -Path WSMan:\localhost\Service\AllowUnencrypted -Value $true`
