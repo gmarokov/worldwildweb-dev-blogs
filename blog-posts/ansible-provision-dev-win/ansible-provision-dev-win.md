@@ -24,7 +24,7 @@ Enable WSL:
 Install Ubuntu distribution but you may choose to install whatever distro you want:
 `Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing`
 
-Star your WSL and update packages:
+Start your WSL and update packages:
 `sudo apt-get update`
 
 Install Ansible:
@@ -42,13 +42,16 @@ which hostname we will target later.
 # Enable WinRM
 
 By default WinRM works only for Private or Domain networks. You can skip that by providing parameter to `Enable-PSRemoting -SkipNetworkProfileCheck` but I don't suggest doing that. Instead make your trusted network private.
-Then enable WinRM: `Enable-PSRemoting` running it in Powershell.
-Enable Basic Auth: `Set-Item -Path WSMan:\localhost\Service\Auth\Basic -Value $true`
-Enable Unencrypted connection: `Set-Item -Path WSMan:\localhost\Service\AllowUnencrypted -Value $true`
+Then enable WinRM:   
+`Enable-PSRemoting` running it in Powershell.
+Enable Basic Auth:   
+`Set-Item -Path WSMan:\localhost\Service\Auth\Basic -Value $true`
+Enable Unencrypted connection:   
+`Set-Item -Path WSMan:\localhost\Service\AllowUnencrypted -Value $true`
 
 # Run the playbook
 
-Using ansible pull run the playbook which install Chocolatey and a few packages from it. Full details can found in the [repo](https://github.com/gmarokov/ansible-win-postinstall). Provide your username and password for Windows.
+Using `ansible-pull` run the playbook which install Chocolatey and a few packages from it. Full details can found in the [repo](https://github.com/gmarokov/ansible-win-postinstall). Provide your username and password for your Windows machine.
 
 `ansible-pull –U https://github.com/gmarokov/ansible-win-postinstall.git -e ansible-user=your_win_user ansible_password=your_win_user_password`
 
