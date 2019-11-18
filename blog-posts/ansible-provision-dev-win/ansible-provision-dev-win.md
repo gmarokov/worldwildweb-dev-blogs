@@ -36,9 +36,6 @@ sudo apt update
 sudo apt install ansible
 ```
 
-Edit your ansible hosts file at `/etc/ansible/hosts` and add `[local] 127.0.0.1`
-which hostname we will target later.
-
 # Enable WinRM
 
 By default WinRM works only for Private or Domain networks. You can skip that by providing parameter to `Enable-PSRemoting -SkipNetworkProfileCheck` but I don't suggest doing that. Instead make your trusted network private.
