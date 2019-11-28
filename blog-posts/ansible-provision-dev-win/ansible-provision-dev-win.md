@@ -36,6 +36,14 @@ sudo apt update
 sudo apt install ansible
 ```
 
+Install WinRM support for Ansible:
+
+```
+sudo apt install python-pip
+sudo pip install pywinrm
+sudo pip install xmltodict
+```
+
 # Enable WinRM
 
 By default WinRM works only for Private or Domain networks. You can skip that by providing parameter to `Enable-PSRemoting -SkipNetworkProfileCheck` but I don't suggest doing that. Instead make your trusted network private.
