@@ -14,5 +14,9 @@
   {
     "id": 202884,
     "relativePathToArticle": "./blog-posts/ansible-provision-dev-win/ansible-provision-dev-win.md"
+  },
+  {
+    "id": 265209,
+    "relativePathToArticle": "./blog-posts/node-api-template/node-api-template.md"
   }
 ]
