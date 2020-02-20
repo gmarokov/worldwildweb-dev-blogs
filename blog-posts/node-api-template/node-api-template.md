@@ -13,7 +13,7 @@ canonical_url: 'https://worldwildweb.dev/node-js-restful-api-template-with-types
 Have you recently started a new Node.js API project? Did you use some template or started the project from scratch?
 I was asking the same questions myself and I was looking for minimal boilerplate for a while. There were so many options that it was hard to pick one.
 Most of them are using Express.js, others are using ES5 or lack test setup.
-So I decided to spin one on my own and reuse it in the future.
+So I decided to spin one on my own and reuse it in the future. Here is [the repo at GitHub](https://github.com/gmarokov/node-fastify-mongo-api).
 
 # How
 
