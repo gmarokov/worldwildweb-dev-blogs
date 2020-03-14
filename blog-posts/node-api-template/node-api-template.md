@@ -29,11 +29,11 @@ My setup has the following characteristics:
 ## Data
 
 - MongoDB with Mongoose
-- Docker for MongoDB service instead of installing it
+- Docker for MongoDB service
 
 ## Tests
 
-- Jest for being the de-facto in Node testing
+- Jest for being the de facto in Node testing
 - In memory Mongod server for easily mock the DB
 - Coverall for coverage collector after Jest report is generated
 
@@ -58,6 +58,6 @@ My setup has the following characteristics:
 3. Collect coverage and pass it to Coverall
 
 And thats it! I hope it's minimal enough.
-Please share some ideas for improvement if you have any. I thought of API versioning but Fastify seems to support that out of the box.
-API key authentication was also something I was considering, but I wasn't sure how exactly to implement it. If you have something in mind would love to discuss it in the comments.
+Please share some ideas for improvement. I thought of API versioning but Fastify seems to support that out of the box.
+API key authentication was also something I was considering, but there were so many available options of implementations. If you have something in mind would love to discuss it in the comments.
 Happy coding!

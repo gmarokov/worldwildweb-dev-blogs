@@ -9,7 +9,7 @@ canonical_url: 'https://worldwildweb.dev/configure-your-dev-windows-machine-with
 ---
 
 Ansible is well known it the IT operations fields with its fantastic automation abilities.
-You can do whatever you want with Windows too if it's a Powershell, bat script or one of the more than one hundred? modules.
+You can do whatever you want with Windows too if it's a Powershell, bat script or one of the more than the hundreds modules.
 I will use it to configure my personal machine and save the hustle every time I step on new one.
 It's not a big deal to install a few programs but I'm sure this will repay in the long term. Can be pretty useful for configuring multiple machines too.
 Using Ansible to target localhost on Linux is like click-click-go, but It's different when it's comes to Windows.
@@ -18,6 +18,7 @@ And all this happens on your localhost.
 
 # Install Ansible on WSL
 
+From within PowerShell run the following commands.
 Enable WSL:
 `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
 
@@ -36,7 +37,7 @@ sudo apt update
 sudo apt install ansible
 ```
 
-Install WinRM support for Ansible:
+Install packages for WinRM support:
 
 ```
 sudo apt install python-pip
@@ -65,3 +66,4 @@ Using `ansible-pull` run the playbook which install Chocolatey and a few package
 # Conclusion
 
 I'm sure you as developer make a lot of tweaks to your os, me too. Having a few more tweaks to add, would be great to share some ideas and extend it even further.
+I also created a playbooks for [Ubuntu](https://github.com/gmarokov/ansible-playbook-postinstall-ubuntu) and [Fedora](https://github.com/gmarokov/ansible-playbook-postinstall-fedora), check them out if you are using one of this distros.

@@ -28,7 +28,7 @@ As previously mentioned Ansible is agentless, but we need control machine — ma
 
 ### Ansible can’t run on Windows but there’s a trick
 
-Currently Ansible can only be installed on Unix based machines, but If you are using Windows as your primary OS, you can install Ubuntu subsystem. Read [this](https://docs.microsoft.com/en-us/windows/wsl/install-win10) for further installation details. If you are non Windows user please continue reading.
+Currently Ansible can only be installed on Unix based machines, but if you are using Windows as your primary OS, you can install Ubuntu subsystem. Read [this](https://docs.microsoft.com/en-us/windows/wsl/install-win10) for further installation details. If you are non Windows user please continue reading.
 
 ## Install Ansible
 
@@ -43,7 +43,7 @@ Lets update our system:
 Add Ansible repository:
 `$ sudo apt-add-repository ppa:ansible/ansible`
 
-Then Install Ansible:
+Then install Ansible:
 `$ apt-get install ansible`
 
 Add Python package manager:
@@ -97,7 +97,7 @@ Add the configuration details:
 ansible_user: ansible_user
 ansible_password: your_password_here
 ansible_port: 5985
-ansible_connection:winrm
+ansible_connection: winrm
 ansible_winrm_transport: basic
 ansible_winrm_operation_timeout_sec: 60
 ansible_winrm_read_timeout_sec: 70
@@ -151,10 +151,11 @@ In the file describe the playbook as follows:
    - name: Install SQL Server
      win_chocolatey:
      name: sql-server-2017
-     state: present- name: Reboot to apply changes
+     state: present
 
-   win_reboot:
-    reboot_timeout: 3600
+   - name: Reboot to apply changes
+     win_reboot:
+      reboot_timeout: 3600
 ```
 
 Execute the playbook by typing:
