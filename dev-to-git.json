@@ -18,5 +18,9 @@
   {
     "id": 265209,
     "relativePathToArticle": "./blog-posts/node-api-template/node-api-template.md"
+  },
+  {
+    "id": 681758,
+    "relativePathToArticle": "./blog-posts/static-code-analysis-for-your-dotnet-projects/static-code-analysis-for-your-dotnet-projects.md"
   }
 ]
