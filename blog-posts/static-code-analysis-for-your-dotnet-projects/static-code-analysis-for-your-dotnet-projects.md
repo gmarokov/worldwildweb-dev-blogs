@@ -10,21 +10,21 @@ canonical_url: 'https://worldwildweb.dev/'
 
 # What is Static Code Analysis
 
-Every developer wants to write predictive, maintainable and high quality software. Unfortunately that's not always the case because of our human nature - we do make mistakes. That's why we try to automate all the things related to software development lifecycle: testing, deploying, running applications. 
+Every developer wants to write predictive, maintainable and high quality software. Unfortunately that's not always the case because of our human nature - we do make mistakes. That's why we try to automate all the things related to software development lifecycle: testing, deploying, running applications.
 
-But what about the codebase? What do we do to enforce minimally complex and maintainable code, ensure proper code styles standards, prevent common pitfalls and violations, and predict what the code would do at runtime? 
+But what about the codebase? What do we do to enforce minimally complex and maintainable code, ensure proper code styles standards, prevent common pitfalls and violations, and predict what the code would do at runtime?
 
-By applying RULES defined by your team, the platform or the programming language. And that's what Static Code Analysis is all about. 
+By applying RULES defined by your team, the platform or the programming language. And that's what Static Code Analysis is all about.
 
-Static Code Analysis can be simple manual inspection such as code review or automated via some of the tools we will overview in this blog post. 
+Static Code Analysis can be simple manual inspection such as code review or automated via some of the tools we will overview in this blog post.
 
 **Keep digging**
 
-*Eric Dietrich wrote very explanatory article about what exactly Static Analysis is here:* 
+_Eric Dietrich wrote very explanatory article about what exactly Static Analysis is here:_
 
 [https://blog.ndepend.com/static-analysis-explanation-everyone/](https://blog.ndepend.com/static-analysis-explanation-everyone/)
 
-*If you are curious about Dynamic Analysis you can also check out these articles:*
+_If you are curious about Dynamic Analysis you can also check out these articles:_
 
 [https://securityboulevard.com/2021/02/dynamic-code-analysis-a-primer/](https://securityboulevard.com/2021/02/dynamic-code-analysis-a-primer/)
 
@@ -32,11 +32,11 @@ Static Code Analysis can be simple manual inspection such as code review or auto
 
 [https://www.overops.com/blog/static-vs-dynamic-code-analysis-how-to-choose-between-them/](https://www.overops.com/blog/static-vs-dynamic-code-analysis-how-to-choose-between-them/)
 
-This post is Part 1 from the Static Analysis series. In the next post we will setup SonarCloud for a [ASP.NET](http://asp.NET) Core + React SPA project in CI pipeline. 
+This post is Part 1 from the Static Analysis series. In the next post we will setup SonarCloud for a [ASP.NET](http://asp.NET) Core + React SPA project in CI pipeline.
 
 # Where to use Static Code Analysis
 
-I found plenty of NuGet packages, IDE extensions and external services available on the market. That was hard to digest and probably I might miss some very helpful tools. Would be great if you guys share your opinion or favorite tools for the job. 
+I found plenty of NuGet packages, IDE extensions and external services available on the market. That was hard to digest and probably I might miss some very helpful tools. Would be great if you guys share your opinion or favorite tools for the job.
 
 ## In development
 
@@ -45,34 +45,34 @@ Using build-time code analysis in Visual Studio /Code (or other preferred tool),
 ### Extensions for Visual Studio Code
 
 - OmniSharp - [https://github.com/OmniSharp/omnisharp-roslyn](https://github.com/OmniSharp/omnisharp-roslyn)
-A go-to tool for C# development in VSC.
+  A go-to tool for C# development in VSC.
 - Roslynator - [https://github.com/JosefPihrt/Roslynator](https://github.com/JosefPihrt/Roslynator)
 
-    A collection of 500+ analyzers, refactorings and fixes for C#, powered by Roslyn.
+  A collection of 500+ analyzers, refactorings and fixes for C#, powered by Roslyn.
 
 - DevSkim - [https://github.com/microsoft/devskim](https://github.com/microsoft/devskim)
-DevSkim is a framework of IDE extensions and language analyzers that provide inline security analysis in the dev environment as the developer writes code.
+  DevSkim is a framework of IDE extensions and language analyzers that provide inline security analysis in the dev environment as the developer writes code.
 - SonarLint - [https://www.sonarlint.org/vscode](https://www.sonarlint.org/vscode)
 
-    Even that this extension doesn't scan your .NET projects it's still super useful for your frontend html, css, js, ts files.
+  Even that this extension doesn't scan your .NET projects it's still super useful for your frontend html, css, js, ts files.
 
 - Sonar Dotnet - [https://github.com/yagoluiz/sonar-dotnet-vscode/](https://github.com/yagoluiz/sonar-dotnet-vscode/)
 
-    Easy connect to SonarCloud from your development environment.
+  Easy connect to SonarCloud from your development environment.
 
 ### Extensions for Visual Studio
 
 - Roslynator - [https://github.com/JosefPihrt/Roslynator](https://github.com/JosefPihrt/Roslynator)
-Again the famous Roslynator analyzers for Visual Studio.
+  Again the famous Roslynator analyzers for Visual Studio.
 - ReSharper - [https://www.jetbrains.com/resharper/](https://www.jetbrains.com/resharper/)
-This is more than just analysis tool. If you haven't heard of ReSharper, definitely should be checked out.
+  This is more than just analysis tool. If you haven't heard of ReSharper, definitely should be checked out.
 - NDepend - [https://www.ndepend.com/](https://www.ndepend.com/)
-The "Swiss Army Knife" for .NET Developers, Architects and Teams.
+  The "Swiss Army Knife" for .NET Developers, Architects and Teams.
 
 ### Other tools
 
 - Rider - [https://www.jetbrains.com/rider/](https://www.jetbrains.com/rider/)
-Another great IDE for .NET developers which comes with the power of ReSharper.
+  Another great IDE for .NET developers which comes with the power of ReSharper.
 
 ## In build pipelines
 
@@ -93,7 +93,7 @@ NuGet packaged analyzers are the easiest, and they will automatically run as you
 - Roslynator analyzers as NuGet package - [https://www.nuget.org/packages/Roslynator.Analyzers](https://www.nuget.org/packages/Roslynator.Analyzers)
 - SonarCloud analyzers - [https://www.nuget.org/packages/SonarAnalyzer.CSharp/](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)
 - Check for Async/await misuses - [https://www.nuget.org/packages/AsyncFixer](https://www.nuget.org/packages/AsyncFixer)
-- An implementation of StyleCop's rules using Roslyn -  [https://www.nuget.org/packages/StyleCop.Analyzers/](https://www.nuget.org/packages/StyleCop.Analyzers/)
+- An implementation of StyleCop's rules using Roslyn - [https://www.nuget.org/packages/StyleCop.Analyzers/](https://www.nuget.org/packages/StyleCop.Analyzers/)
 
 **Security analyzers**
 
@@ -114,20 +114,20 @@ Different CI tools may provide their own tool for security analysis:
 
 - SonarCloud - [https://sonarcloud.io/](https://sonarcloud.io/)
 
-    My go-to tool for .NET projects. They even have a separate scanner for .NET. Pretty nice integration with Azure DevOps. Free for public projects.
+  My go-to tool for .NET projects. They even have a separate scanner for .NET. Pretty nice integration with Azure DevOps. Free for public projects.
 
 - Embold - [https://embold.io/](https://embold.io/)
 
-    Fairly new tool with Free plan for 1M executable-lines-of-code for public repositories.
+  Fairly new tool with Free plan for 1M executable-lines-of-code for public repositories.
 
 - CodeBeat - [https://codebeat.co/](https://codebeat.co/projects/gitlab-com-autohub-autohub-web-master)
-Free for public repositories.
+  Free for public repositories.
 - CodeFactor - [https://www.codefactor.io/](https://www.codefactor.io/dashboard)
-1 private and unlimited free repositories.
+  1 private and unlimited free repositories.
 - CodeClimate - [https://codeclimate.com/](https://codeclimate.com/github/gmarokov/dotnet-trx2sonar)
-50 free repositories.
+  50 free repositories.
 - Codacy - [https://www.codacy.com/](https://www.codacy.com/pricing)
-Paid service.
+  Paid service.
 
 And many more counting. These are the one I found easy to get started without installing and configuring additional software.
 
