@@ -3,7 +3,7 @@ published: true
 title: 'Static Code Analysis for your .NET projects'
 cover_image: ''
 description: 'Collection of static code analysis tools for dotnet projects'
-tags: static-code-analysis, dotnet, tools, sonarcloud
+tags: analysis, dotnet, tools, sonarcloud
 series:
 canonical_url: 'https://worldwildweb.dev/static-code-analysis-for-your-net-projects'
 ---
@@ -32,7 +32,7 @@ _If you are curious about Dynamic Analysis you can also check out these articles
 
 [https://www.overops.com/blog/static-vs-dynamic-code-analysis-how-to-choose-between-them/](https://www.overops.com/blog/static-vs-dynamic-code-analysis-how-to-choose-between-them/)
 
-This post is Part 1 from the Static Analysis series. In the next post we will setup SonarCloud for a [ASP.NET](http://asp.NET) Core + React SPA project in CI pipeline.
+This post is Part 1 from the Static Analysis series. In the next post we will setup SonarCloud for a ASP.NET Core + React SPA project in CI pipeline.
 
 # Where to use Static Code Analysis
 
@@ -73,7 +73,7 @@ Using build-time code analysis in Visual Studio /Code (or other preferred tool),
 
 NuGet packaged analyzers are the easiest, and they will automatically run as your project builds on the build agents. When a build encounters a code quality error, you can immediately fail the build, send alerts, or apply any other actions you and your team needs.
 
-[ASP.NET](http://asp.net/) Core 3.0 or later, comes with analyzers which are included in the .NET Core SDK. To enable the analyzer in your project, include the `IncludeOpenAPIAnalyzers` property in the project file:
+ASP.NET Core 3.0 or later, comes with analyzers which are included in the .NET Core SDK. To enable the analyzer in your project, include the `IncludeOpenAPIAnalyzers` property in the project file:
 
 ```csharp
 <PropertyGroup>
@@ -84,7 +84,7 @@ NuGet packaged analyzers are the easiest, and they will automatically run as you
 ### NuGet packages
 
 - Microsoft recommended code quality rules and .NET API usage rules - [https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers/](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers/)
-- Microsoft's CSharp analyzers for [ASP.NET](http://asp.net/) Core MVC - [https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Api.Analyzers](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Api.Analyzers)
+- Microsoft's CSharp analyzers for ASP.NET Core MVC - [https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Api.Analyzers](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Api.Analyzers)
 - Roslynator analyzers as NuGet package - [https://www.nuget.org/packages/Roslynator.Analyzers](https://www.nuget.org/packages/Roslynator.Analyzers)
 - SonarCloud analyzers - [https://www.nuget.org/packages/SonarAnalyzer.CSharp/](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)
 - Check for Async/await misuses - [https://www.nuget.org/packages/AsyncFixer](https://www.nuget.org/packages/AsyncFixer)
@@ -99,11 +99,13 @@ Different CI tools may provide their own tool for security analysis:
 
 - Only Azure DevOps - [https://secdevtools.azurewebsites.net/helpcredscan.html](https://secdevtools.azurewebsites.net/helpcredscan.html)
 - Only GitLab - [https://docs.gitlab.com/ee/user/application_security/sast/index.html](https://docs.gitlab.com/ee/user/application_security/sast/index.html)
+- GitHub - https://github.com/marketplace?category=code-quality&type=apps
+  Last but not least. GitHub's community driven marketplace provides so many tools for code quality, security and everything else you can think of.
 
 **NuGet packages for the Test projects**
 
 - Provides diagnostic analyzers to warn about incorrect usage of NSubstitute in C# - [https://www.nuget.org/packages/NSubstitute.Analyzers.CSharp](https://www.nuget.org/packages/NSubstitute.Analyzers.CSharp)
-- Code Analyzers for projects using [xUnit.net -](http://xunit.net/) [https://www.nuget.org/packages/xunit.analyzers](https://www.nuget.org/packages/xunit.analyzers)
+- Code Analyzers for projects using xUnit.net - [https://www.nuget.org/packages/xunit.analyzers](https://www.nuget.org/packages/xunit.analyzers)
 
 ### External services
 
@@ -119,8 +121,6 @@ Different CI tools may provide their own tool for security analysis:
   50 free repositories.
 - Codacy - [https://www.codacy.com/](https://www.codacy.com/pricing)
   Paid service.
-- GitHub - https://github.com/marketplace?category=code-quality&type=apps
-  Last but not least. GitHub's community driven marketplace provides so many tools for code quality, security and everything else you can think of.
 
 And many more counting. These are the one I found easy to get started without installing and configuring additional software.
 
@@ -134,9 +134,9 @@ In first issues raised by static code analysis might be considered as overhead, 
 
 Rules may sometimes get on your way and slow down your development, but you and your team are in charge to establish given rules or completely ignore/disable them.
 
-In the next post I will configure SonarCloud for [ASP.](http://asp.net)NET Core + React SPA so stay tuned.
+In the next post I will configure SonarCloud for ASP.NET Core + React SPA so stay tuned.
 
-Which are your favorite static code analysis tools? Please share your thoughts in the comments or (create a PR in GitHub)[https://github.com/gmarokov/worldwildweb-dev-blogs/blob/master/blog-posts/static-code-analysis-for-your-dotnet-projects/static-code-analysis-for-your-dotnet-projects.md].
+Which are your favorite static code analysis tools? Please share your thoughts in the comments or [create a PR in GitHub](https://github.com/gmarokov/worldwildweb-dev-blogs/blob/master/blog-posts/static-code-analysis-for-your-dotnet-projects/static-code-analysis-for-your-dotnet-projects.md).
 
 Happy analyzing :)
 
