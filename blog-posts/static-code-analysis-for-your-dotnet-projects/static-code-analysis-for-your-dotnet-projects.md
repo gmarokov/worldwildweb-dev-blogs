@@ -47,17 +47,12 @@ Using build-time code analysis in Visual Studio /Code (or other preferred tool),
 - OmniSharp - [https://github.com/OmniSharp/omnisharp-roslyn](https://github.com/OmniSharp/omnisharp-roslyn)
   A go-to tool for C# development in VSC.
 - Roslynator - [https://github.com/JosefPihrt/Roslynator](https://github.com/JosefPihrt/Roslynator)
-
   A collection of 500+ analyzers, refactorings and fixes for C#, powered by Roslyn.
-
 - DevSkim - [https://github.com/microsoft/devskim](https://github.com/microsoft/devskim)
   DevSkim is a framework of IDE extensions and language analyzers that provide inline security analysis in the dev environment as the developer writes code.
 - SonarLint - [https://www.sonarlint.org/vscode](https://www.sonarlint.org/vscode)
-
   Even that this extension doesn't scan your .NET projects it's still super useful for your frontend html, css, js, ts files.
-
 - Sonar Dotnet - [https://github.com/yagoluiz/sonar-dotnet-vscode/](https://github.com/yagoluiz/sonar-dotnet-vscode/)
-
   Easy connect to SonarCloud from your development environment.
 
 ### Extensions for Visual Studio
@@ -113,13 +108,9 @@ Different CI tools may provide their own tool for security analysis:
 ### External services
 
 - SonarCloud - [https://sonarcloud.io/](https://sonarcloud.io/)
-
   My go-to tool for .NET projects. They even have a separate scanner for .NET. Pretty nice integration with Azure DevOps. Free for public projects.
-
 - Embold - [https://embold.io/](https://embold.io/)
-
   Fairly new tool with Free plan for 1M executable-lines-of-code for public repositories.
-
 - CodeBeat - [https://codebeat.co/](https://codebeat.co/projects/gitlab-com-autohub-autohub-web-master)
   Free for public repositories.
 - CodeFactor - [https://www.codefactor.io/](https://www.codefactor.io/dashboard)
@@ -128,6 +119,8 @@ Different CI tools may provide their own tool for security analysis:
   50 free repositories.
 - Codacy - [https://www.codacy.com/](https://www.codacy.com/pricing)
   Paid service.
+- GitHub - https://github.com/marketplace?category=code-quality&type=apps
+  Last but not least. GitHub's community driven marketplace provides so many tools for code quality, security and everything else you can think of.
 
 And many more counting. These are the one I found easy to get started without installing and configuring additional software.
 
