@@ -1,11 +1,11 @@
 ---
-published: false
+published: true
 title: 'Static Code Analysis for your .NET projects'
 cover_image: ''
 description: 'Collection of static code analysis tools for dotnet projects'
 tags: static-code-analysis, dotnet, tools, sonarcloud
 series:
-canonical_url: 'https://worldwildweb.dev/'
+canonical_url: 'https://worldwildweb.dev/static-code-analysis-for-your-net-projects'
 ---
 
 # What is Static Code Analysis
@@ -76,9 +76,9 @@ NuGet packaged analyzers are the easiest, and they will automatically run as you
 [ASP.NET](http://asp.net/) Core 3.0 or later, comes with analyzers which are included in the .NET Core SDK. To enable the analyzer in your project, include the `IncludeOpenAPIAnalyzers` property in the project file:
 
 ```csharp
-*<PropertyGroup>
+<PropertyGroup>
 	<IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
-</PropertyGroup>*
+</PropertyGroup>
 ```
 
 ### NuGet packages
@@ -136,7 +136,7 @@ Rules may sometimes get on your way and slow down your development, but you and 
 
 In the next post I will configure SonarCloud for [ASP.](http://asp.net)NET Core + React SPA so stay tuned.
 
-Which are your favorite static code analysis tools? Please share your thoughts in the comments or (create a PR in GitHub)[].
+Which are your favorite static code analysis tools? Please share your thoughts in the comments or (create a PR in GitHub)[https://github.com/gmarokov/worldwildweb-dev-blogs/blob/master/blog-posts/static-code-analysis-for-your-dotnet-projects/static-code-analysis-for-your-dotnet-projects.md].
 
 Happy analyzing :)
 
