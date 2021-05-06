@@ -73,7 +73,7 @@ Using build-time code analysis in Visual Studio /Code (or other preferred tool),
 
 NuGet packaged analyzers are the easiest, and they will automatically run as your project builds on the build agents. When a build encounters a code quality error, you can immediately fail the build, send alerts, or apply any other actions you and your team needs.
 
-ASP.NET Core 3.0 or later, comes with analyzers which are included in the .NET Core SDK. To enable the analyzer in your project, include the `IncludeOpenAPIAnalyzers` property in the project file:
+.NET Core SDK 3.0 or later, comes with included analyzers for Open APIs previously known as Swagger. To enable the analyzer in your project, include the IncludeOpenAPIAnalyzers property in the project file:
 
 ```csharp
 <PropertyGroup>
