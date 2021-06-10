@@ -4,7 +4,7 @@ title: 'Static Code Analysis for your .NET projects'
 cover_image: ''
 description: 'Collection of static code analysis tools for dotnet projects'
 tags: analysis, dotnet, tools, sonarcloud
-series:
+series: 'Static Code Analysis for .NET Core projects'
 canonical_url: 'https://worldwildweb.dev/static-code-analysis-for-your-net-projects'
 ---
 
@@ -32,7 +32,7 @@ _If you are curious about Dynamic Analysis you can also check out these articles
 
 [https://www.overops.com/blog/static-vs-dynamic-code-analysis-how-to-choose-between-them/](https://www.overops.com/blog/static-vs-dynamic-code-analysis-how-to-choose-between-them/)
 
-This post is Part 1 from the Static Analysis series. In the next post we will setup SonarCloud for a ASP.NET Core + React SPA project in CI pipeline.
+This post is Part 1 from the Static Analysis series. In the next post we will setup SonarCloud for a ASP.NET Core + React SPA project in CI pipeline. Check it out [here](https://dev.to/gmarokov/analyze-asp-net-core-with-your-react-spa-in-sonarcloud-5goj).
 
 # Where to use Static Code Analysis
 
