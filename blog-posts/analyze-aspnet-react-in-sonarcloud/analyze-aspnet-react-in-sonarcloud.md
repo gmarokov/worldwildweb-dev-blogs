@@ -38,13 +38,13 @@ This is the easiest setup because SonarCloud generates pipeline setup for you. O
 
 ## BitBucket
 
-Before going into that beware that BitBucket (not yet?) supports apps targeting .NET Framework directly, but of course you can always use containers for that.
+Before going into BitBucket beware that the platform (not yet?) supports apps targeting .NET Framework directly, but of course you can always use containers for the purpose.
 
 SonarCloud doesn't provide any ready to go templates for .NET Core projects and BitBucket's pipeline. You still need to install and configure everything yourself.
 
 ## Azure DevOps
 
-I read somewhere that dotnet-sonarscanner was developed with the partnership of Microsoft so no wonder the best integration with SonarCloud is with the infamous Azure DevOps platform.
+I read somewhere that dotnet-sonarscanner was developed with the partnership of Microsoft so no wonder the best integration with SonarCloud is with the famous Azure DevOps platform.
 
 To enable SonarCloud in your pipelines first you need to install SonarCloud extension from Visual Studio marketplace and then follow the super descriptive guide which mostly involved clicking and can be easily accomplished with the GUI builder.
 
@@ -78,7 +78,7 @@ Or if you are using .NET Core 3.1 and above, the default template includes the f
 
 ### Option 2: Analyze frontend and backend separately
 
-This option is useful when you have a monorepo with your backend and frontend in it, but they have a separate startup process or even different teams working on them. This option will require to create a 2 separate projects in SonarCloud . The option will also require to use the default SonarCloud analyzer for your frontend.
+This option is useful when you have a monorepo with your backend and frontend in it, but they have a separate startup process or even different teams working on them. This option will require to create a 2 separate projects in SonarCloud. The option will also require to use the default SonarCloud analyzer for your frontend.
 
 # Build pipeline in GitLab
 
