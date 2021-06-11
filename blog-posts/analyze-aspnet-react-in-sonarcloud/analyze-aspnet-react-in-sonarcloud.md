@@ -1,11 +1,11 @@
 ---
 published: true
-title: 'Analyze ASP.NET Core with your React SPA in SonarCloud'
+title: 'Analyze ASP.NET Core with React SPA in SonarCloud'
 cover_image: ''
 description: 'Setup SonarCloud analysis with ASP.NET Core and React SPA in GitLab CI'
 tags: analysis, dotnet, react, sonarcloud
 series: 'Static Code Analysis for .NET Core projects'
-canonical_url: 'https://worldwildweb.dev/analyze-asp-net-core-with-your-react-spa-in-sonarcloud/'
+canonical_url: 'https://worldwildweb.dev/analyze-asp-net-core-with-react-spa-in-sonarcloud/'
 ---
 
 [SonarCloud](https://sonarcloud.io/) is well known cloud based tool for Static Code Analysis which supports most of the popular programming languages - JavaScript, TypeScript, Python, C#, Java and counting. The tool is also known as [SonarQube](https://www.sonarqube.org/) which is the self hosted version of the analyzer. SonarCloud is completely free for public repositories and SonarQube is even open sourced. These characteristics make it my go-to tool for static code analysis for this project - setup SonarCloud for ASP.NET Core with React single page application.
